@@ -1,6 +1,6 @@
 {
   "name": "mulder-brewing-palindrome",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Palindrome detector",
   "main": "index.js",
   "scripts": {

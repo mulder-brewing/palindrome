@@ -19,11 +19,19 @@ describe ("Phrase", function() {
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
       assert(punctuatedPalindrome.palindrome());
     })
+    it("should return false when all non alpha characters", function() {
+      let nonAlpha = new Phrase("1234.56");
+      assert(!nonAlpha.palindrome());
+    })
   })
   describe("#letters", function() {
     it("should only return letters", function() {
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
       assert.strictEqual(punctuatedPalindrome.letters(),"MadamImAdam");
+    })
+    it("should return the empty string on no match", function() {
+      let noLetters = new Phrase("1234.56");
+      assert.strictEqual(noLetters.letters(), "");
     })
   })
 })
